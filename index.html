@@ -1,0 +1,180 @@
+<head>
+	<title>Cybertruck Simulator - Pedestrian Tactics</title>
+	<link rel="stylesheet" href="reset.css" />
+</head>
+
+
+<body>
+	<div id="video-container">
+		<video autoplay loop muted playsinline>
+			<source src="images/bg-video.mp4" type="video/mp4" />
+			Your browser does not support the video tag.
+		</video>
+	</div>
+	<div id="container">
+		<div class="section">
+			<img id="main-img" src="images/title.png" alt="Cybertruck Simulator 2024" />
+			<p>
+				Rack up as many lawsuits as you can. <br>Also available on <a
+					href="https://pedestriantactics.itch.io/cybertruck-simulator">itch.io</a>.
+			</p>
+		</div>
+		<div id="links" class="section">
+			<a href="https://youtu.be/502fiyjHqGM?si=QFAVOl6hI7hWdpBw">Watch the trailer</a>
+			<a
+				href="https://github.com/pedestriantactics/cybertruck-simulator/releases/download/PT-G3/cybertrucksimulator-mac.dmg">Download
+				for Mac</a>
+			<a
+				href="https://github.com/pedestriantactics/cybertruck-simulator/releases/download/PT-G3/cybertrucksimulator-windows.exe">Download
+				for Windows</a>
+		</div>
+	</div>
+	<div id="top-left">
+		<p class="caption mono">PT-G3</p>
+	</div>
+	<div id="bottom-right">
+		<p class="caption mono">A game by <a href="http://pedestriantactics.com">Pedestrian Tactics</a></p>
+	</div>
+</body>
+
+
+<style>
+	@font-face {
+		font-family: "Hyperwalk VF";
+		src: url("fonts/HyperwalkVF.woff2") format("woff2"),
+			url("fonts/HyperwalkVF.woff") format("woff"),
+			url("fonts/HyperwalkVF.ttf") format("ttf");
+	}
+
+	@font-face {
+		font-family: "Hyperwalk Mono VF";
+		src: url("fonts/HyperwalkMonoVF.woff2") format("woff2"),
+			url("fonts/HyperwalkMonoVF.woff") format("woff"),
+			url("fonts/HyperwalkMonoVF.ttf") format("ttf");
+	}
+
+	:root {
+		background-color: black;
+		color: white;
+		font-family: "Hyperwalk Mono VF", monospace;
+		font-size: 10pt;
+		font-weight: 80;
+		text-transform: uppercase;
+	}
+
+	body,
+	p,
+	h1,
+	h2,
+	h3 {
+		line-height: 1.2em;
+		margin-bottom: .8;
+	}
+
+	#container p, #container a {
+		font-family: "Hyperwalk VF", sans-serif;
+		font-size: 16pt;
+		font-weight: 75;
+		text-transform: none;
+	}
+
+	a,
+	a:hover,
+	a:visited,
+	a:focus {
+		color: white;
+		border-color: white;
+	}
+
+	#video-container {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+		z-index: -1;
+		/* Ensure the video stays in the background */
+	}
+
+	#video-container video {
+		/* align to the center and make height 100% */
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+	}
+
+	/* top left will be fixed to the top left */
+	#top-left {
+		position: fixed;
+		top: 1rem;
+		left: 1rem;
+	}
+
+	/* bottom right will be fixed to the bottom right */
+	#bottom-right {
+		position: fixed;
+		bottom: 1rem;
+		right: 1rem;
+	}
+
+	#container {
+		/* align content to the center horizontally and vertically */
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	#main-img {
+		width: 50vw;
+		margin-bottom: 0;
+	}
+
+
+	#links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: .5rem;
+	}
+
+	#links a {
+		display: inline-block;
+		text-decoration: none;
+		background-color: white;
+		color: black;
+		padding: .3em .3em .2em .3em
+	}
+
+	.section {
+		margin-bottom: 2rem;
+	}
+
+	/* create a breakpoint where the logo changes width at 520px */
+	@media (max-width: 520px) {
+		#main-img {
+			width: 80vw;
+		}
+	}
+
+	/* create a breakpoint at 520 height where the logo height goes to 30vh */
+	@media (max-height: 520px) {
+		#main-img {
+			height: 40vh;
+			width: auto;
+		}
+	}
+</style>
